@@ -1,0 +1,1 @@
+import{f as e,t}from"./login-view-Dpx0GmI9.js";import{c as n,o as r}from"./index-BYgBqdEo.js";var i=n();function a(){let{user:n,isPending:a}=e();return a?(0,i.jsx)(`div`,{className:`grid min-h-dvh place-items-center bg-bg text-sm text-muted`,children:`Checking operator session…`}):n?(0,i.jsx)(r,{to:`/`}):(0,i.jsx)(t,{})}export{a as component};

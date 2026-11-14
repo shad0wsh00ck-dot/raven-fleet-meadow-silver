@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "HackerAI Pro Max",
+      "hasCanvas": false,
+      "bodyTextLen": 840,
+      "bodyTextHash": "d17daf96735803063a9f3954af8e6c1102552a9107bae24d1fb91aa821312fb0",
+      "bodyTextPrefix": "HackerAI PRO MAX · ULTRA Authorize this operator on the ULTRA fl",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "HackerAI Pro Max",
+      "hasCanvas": false,
+      "bodyTextLen": 457,
+      "bodyTextHash": "66f146b4505c629088c1eee8f319e935a04ac1e18fc91602437531e5adfd787a",
+      "bodyTextPrefix": "HackerAI Pro Max OLLAMA CLOUD LOGIN DEVICE AUTHORIZATION Node HA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
