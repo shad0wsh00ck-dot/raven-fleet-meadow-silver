@@ -1,6 +1,6 @@
-import { dn as env, vn as BetterAuthError, xn as defineErrorCodes } from "../_libs/@better-auth/core+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/url-DwGxbmbA.js
-var PACKAGE_VERSION = "1.6.30";
+import { Cn as defineErrorCodes, bn as BetterAuthError, pn as env } from "../_libs/@better-auth/core+[...].mjs";
+// node_modules/.nitro/vite/services/ssr/assets/url-CtjE_NaK.js
+var PACKAGE_VERSION = "1.6.34";
 var GENERIC_OAUTH_ERROR_CODES = defineErrorCodes({
 	INVALID_OAUTH_CONFIGURATION: "Invalid OAuth configuration",
 	TOKEN_URL_NOT_FOUND: "Invalid OAuth configuration. Token URL not found.",
@@ -346,5 +346,4 @@ function resolveBaseURL(config, basePath, source, loadEnv, trustedProxyHeaders) 
 	if (typeof config === "string") return getBaseURL(config, basePath, request, loadEnv, trustedProxyHeaders);
 	return getBaseURL(void 0, basePath, request, loadEnv, trustedProxyHeaders);
 }
-//#endregion
 export { getOrigin as a, isRequestLike as c, getHost as i, resolveBaseURL as l, PACKAGE_VERSION as n, getProtocol as o, getBaseURL as r, isDynamicBaseURLConfig as s, GENERIC_OAUTH_ERROR_CODES as t, wildcardMatch as u };

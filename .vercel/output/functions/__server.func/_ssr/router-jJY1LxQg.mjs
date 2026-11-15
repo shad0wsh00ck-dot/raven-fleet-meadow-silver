@@ -1,16 +1,19 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { C as useRouter, Z as require_react, _ as lazyRouteComponent, f as Scripts, g as Outlet, h as createRouter, p as HeadContent, v as createFileRoute, w as require_jsx_runtime, y as createRootRoute } from "../_libs/@tanstack/react-router+[...].mjs";
-import { a as getServerFnById, i as TSS_SERVER_FUNCTION, r as createServerFn, s as __exportAll } from "./ssr.mjs";
+import { t as __exportAll } from "./rolldown-runtime-D8jQpDG7.mjs";
 import { L as string, N as number, P as object, R as union, j as literal } from "../_libs/@better-auth/core+[...].mjs";
-import { r as getSql } from "./db-3BohDyve.mjs";
-import { i as getModel } from "./models-B5dOXbJE.mjs";
-import { t as assertSameSiteRequest } from "./isolation.server-l_Ds1Zru.mjs";
-import { r as auth, t as getSessionUser } from "./verify.server-BE9SUdY4.mjs";
+import { a as getServerFnById, i as TSS_SERVER_FUNCTION, r as createServerFn } from "./ssr.mjs";
+import { r as getSql } from "./db-BhKN53z1.mjs";
+import { r as auth, t as getSessionUser } from "./verify.server-C4w1ZEsG.mjs";
+import { t as assertSameSiteRequest } from "./isolation.server-d-EuYjiq.mjs";
+import { i as getModel } from "./models-Dz5Y5iYL.mjs";
+import { C as useRouter, _ as lazyRouteComponent, f as Scripts, g as Outlet, h as createRouter, p as HeadContent, qt as require_react, v as createFileRoute, y as createRootRoute } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as TriangleAlert } from "../_libs/lucide-react.mjs";
+import { t as require_jsx_dev_runtime } from "../_libs/react.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-5v5cmJbt.js
+// node_modules/.nitro/vite/services/ssr/assets/router-jJY1LxQg.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
-var import_jsx_runtime = require_jsx_runtime();
+var import_jsx_dev_runtime = require_jsx_dev_runtime();
+var _jsxFileName$2 = "/app/applet/src/lib/error-component.tsx";
 var FALLBACK_MESSAGE = "An unexpected error occurred. Try reloading the page.";
 function errorMessage(error) {
 	if (error instanceof Error && error.message) return error.message;
@@ -18,28 +21,49 @@ function errorMessage(error) {
 	return FALLBACK_MESSAGE;
 }
 function AppErrorComponent({ error }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
+	return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("main", {
 		className: "flex min-h-screen flex-col items-center justify-center gap-3 px-6 text-center bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50",
 		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
 				className: "text-red-500",
 				"aria-hidden": "true",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
+				children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(TriangleAlert, {
 					className: "size-10",
 					strokeWidth: 2
-				})
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+				}, void 0, false, {
+					fileName: _jsxFileName$2,
+					lineNumber: 21,
+					columnNumber: 9
+				}, this)
+			}, void 0, false, {
+				fileName: _jsxFileName$2,
+				lineNumber: 20,
+				columnNumber: 7
+			}, this),
+			/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", {
 				className: "text-lg font-semibold",
 				children: "Something went wrong"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+			}, void 0, false, {
+				fileName: _jsxFileName$2,
+				lineNumber: 23,
+				columnNumber: 7
+			}, this),
+			/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
 				className: "max-w-md text-sm break-words text-zinc-500 dark:text-zinc-400",
 				children: errorMessage(error)
-			})
+			}, void 0, false, {
+				fileName: _jsxFileName$2,
+				lineNumber: 24,
+				columnNumber: 7
+			}, this)
 		]
-	});
+	}, void 0, true, {
+		fileName: _jsxFileName$2,
+		lineNumber: 14,
+		columnNumber: 5
+	}, this);
 }
+var _jsxFileName$1 = "/app/applet/src/lib/auth/provider.tsx";
 /**
 * App-wide client provider mounted once near the root (in `src/routes/__root.tsx`):
 *
@@ -51,7 +75,11 @@ function AppErrorComponent({ error }) {
 * (e.g. a toast or theme provider) without churning the root shell.
 */
 function AuthProvider({ children }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_jsx_runtime.Fragment, { children });
+	return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_jsx_dev_runtime.Fragment, { children }, void 0, false, {
+		fileName: _jsxFileName$1,
+		lineNumber: 14,
+		columnNumber: 10
+	}, this);
 }
 var CONNECTOR_TOKEN_READY_EVENT = "grok:connector-token-ready";
 function isGrokEmbedderOrigin(origin) {
@@ -315,7 +343,8 @@ var createSsrRpc = (functionId) => {
 	});
 };
 var fetchSessionUser = createServerFn({ method: "GET" }).handler(createSsrRpc("84e93aa9a4240c380045ee2a2b03d040f71423f1e8e84c8eba0a02080539bf41"));
-var styles_default = "/assets/styles-CRRPLR2Q.css";
+var styles_default = "/assets/styles-DSHZWrMX.css";
+var _jsxFileName = "/app/applet/src/routes/__root.tsx";
 var APP_NAME = "HackerAI Pro Max";
 var Route$4 = createRootRoute({
 	beforeLoad: async () => ({ sessionUser: await fetchSessionUser() }),
@@ -372,28 +401,64 @@ var Route$4 = createRootRoute({
 	component: RootShell
 });
 function RootShell() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("html", {
+	return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("html", {
 		lang: "en",
 		className: "dark antialiased",
 		suppressHydrationWarning: true,
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("head", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeadContent, {}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("body", {
+		children: [/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("head", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(HeadContent, {}, void 0, false, {
+			fileName: _jsxFileName,
+			lineNumber: 50,
+			columnNumber: 9
+		}, this) }, void 0, false, {
+			fileName: _jsxFileName,
+			lineNumber: 49,
+			columnNumber: 7
+		}, this), /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", {
 			className: "bg-bg text-fg",
 			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PreviewHostBridge, {}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuthProvider, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {}) }),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
+				/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewHostBridge, {}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 53,
+					columnNumber: 9
+				}, this),
+				/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(AuthProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Outlet, {}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 55,
+					columnNumber: 11
+				}, this) }, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 54,
+					columnNumber: 9
+				}, this),
+				/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Toaster, {
 					theme: "dark",
 					position: "bottom-right",
 					toastOptions: { className: "!bg-elevated !text-fg !border-border !font-[family-name:var(--font-sans)]" }
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scripts, {})
+				}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 57,
+					columnNumber: 9
+				}, this),
+				/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Scripts, {}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 65,
+					columnNumber: 9
+				}, this)
 			]
-		})]
-	});
+		}, void 0, true, {
+			fileName: _jsxFileName,
+			lineNumber: 52,
+			columnNumber: 7
+		}, this)]
+	}, void 0, true, {
+		fileName: _jsxFileName,
+		lineNumber: 48,
+		columnNumber: 5
+	}, this);
 }
-var $$splitComponentImporter$1 = () => import("./routes-Do7Zw6ho.mjs");
+var $$splitComponentImporter$1 = () => import("./routes-Chn0TFYg.mjs");
 var Route$3 = createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter$1, "component") });
-var $$splitComponentImporter = () => import("./login-CyBBMlxF.mjs");
+var $$splitComponentImporter = () => import("./login-CkcssGQo.mjs");
 var Route$2 = createFileRoute("/login")({ component: lazyRouteComponent($$splitComponentImporter, "component") });
 var SEVERITIES = [
 	"critical",
@@ -1231,5 +1296,4 @@ function getRouter() {
 		defaultErrorComponent: AppErrorComponent
 	});
 }
-//#endregion
 export { LAB_TARGETS as a, skillById as i, ELECTRA_SKILL_IDS as n, createSsrRpc as o, KALI_SKILLS as r, router_exports as t };

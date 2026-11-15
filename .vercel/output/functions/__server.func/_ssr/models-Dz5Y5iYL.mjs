@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/models-B5dOXbJE.js
+// node_modules/.nitro/vite/services/ssr/assets/models-Dz5Y5iYL.js
 var CLOUD_MODELS = [
 	{
 		id: "gemma4-31b",
@@ -89,5 +89,4 @@ var MODES = [
 		hint: "Review & PoC"
 	}
 ];
-//#endregion
 export { modelAllowed as a, getModel as i, DEFAULT_MODEL_ID as n, MODES as r, CLOUD_MODELS as t };

@@ -1,18 +1,12 @@
 import { o as __toESM, r as __exportAll } from "../_runtime.mjs";
-import { Z as require_react } from "../_libs/@tanstack/react-router+[...].mjs";
-import { s as __exportAll$1 } from "./ssr.mjs";
-import { an as isSafeUrlScheme, in as createFetch, nn as toKebabCase, tn as capitalizeFirstLetter } from "../_libs/@better-auth/core+[...].mjs";
-import { n as PACKAGE_VERSION, r as getBaseURL, t as GENERIC_OAUTH_ERROR_CODES } from "./url-DwGxbmbA.mjs";
+import { t as __exportAll$1 } from "./rolldown-runtime-D8jQpDG7.mjs";
+import { n as PACKAGE_VERSION, r as getBaseURL, t as GENERIC_OAUTH_ERROR_CODES } from "./url-CtjE_NaK.mjs";
+import { qt as require_react } from "../_libs/@tanstack/react-router+[...].mjs";
+import { in as toKebabCase, on as createFetch, rn as capitalizeFirstLetter, sn as isSafeUrlScheme } from "../_libs/@better-auth/core+[...].mjs";
 import { a as atom, i as onSet, n as STORE_UNMOUNT_DELAY, r as onMount, t as listenKeys } from "../_libs/nanostores.mjs";
 import { n as defu } from "../_libs/defu.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/client-CGEuTn_7.js
-var client_CGEuTn_7_exports = /* @__PURE__ */ __exportAll({
-	a: () => signOut,
-	i: () => signIn,
-	n: () => client_exports,
-	r: () => getBearerToken,
-	t: () => authClient
-});
+// node_modules/.nitro/vite/services/ssr/assets/client-FPuI81k2.js
+var client_FPuI81k2_exports = /* @__PURE__ */ __exportAll({ n: () => client_exports });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var genericOAuthClient = () => {
 	return {
@@ -870,13 +864,7 @@ async function runPreSignInSignOut({ livePreview, hasBearer, requestSignOut, cle
 	if (hasBearer || !livePreview) await settleWithin(requestSignOut, timeoutMs ?? signOutTimeoutMs(livePreview));
 	clearToken();
 }
-var client_exports = /* @__PURE__ */ __exportAll$1({
-	authClient: () => authClient,
-	authEnabled: () => true,
-	getBearerToken: () => getBearerToken,
-	signIn: () => signIn,
-	signOut: () => signOut
-});
+var client_exports = /* @__PURE__ */ __exportAll$1({ getBearerToken: () => getBearerToken });
 /**
 * Better Auth client for this React SPA (browser-side).
 *
@@ -1045,5 +1033,4 @@ async function signOut(redirectTo = "/") {
 		}
 	});
 }
-//#endregion
-export { signOut as a, signIn as i, client_CGEuTn_7_exports as n, getBearerToken as r, authClient as t };
+export { signOut as a, signIn as i, client_FPuI81k2_exports as n, getBearerToken as r, authClient as t };

@@ -1,11 +1,13 @@
-import { r as __exportAll$1 } from "../_runtime.mjs";
-import { A as toCrossJSONAsync, B as executeRewriteInput, F as getStylesheetHref, G as isPromise, I as resolveManifestAssetLink, J as parseRedirect, L as resolveManifestCssLink, O as fromJSON, P as getScriptPreloadAttrs, R as waitForReason, V as invariant, W as isDangerousProtocol, X as isNotFound, Y as rootRouteId, Z as require_react, a as disposeSsrResponse, c as replaceSsrResponse, i as defineHandlerCallback, j as toCrossJSONStream, l as stripSsrResponseBody, m as RouterProvider, o as isSsrResponse, q as isRedirect, r as bindSsrResponseToRequest, s as normalizeSsrResponse, t as renderRouterToStream, w as require_jsx_runtime, z as _getRenderedMatches } from "../_libs/@tanstack/react-router+[...].mjs";
+import { r as __exportAll } from "../_runtime.mjs";
+import { t as __exportAll$1 } from "./rolldown-runtime-D8jQpDG7.mjs";
+import { At as getScriptPreloadAttrs, Bt as isDangerousProtocol, Ft as _getRenderedMatches, Gt as rootRouteId, It as executeRewriteInput, Kt as isNotFound, Mt as resolveManifestAssetLink, Nt as resolveManifestCssLink, Pt as waitForReason, Ut as isRedirect, Vt as isPromise, Wt as parseRedirect, a as disposeSsrResponse, c as replaceSsrResponse, i as defineHandlerCallback, jt as getStylesheetHref, l as stripSsrResponseBody, m as RouterProvider, o as isSsrResponse, qt as require_react, r as bindSsrResponseToRequest, s as normalizeSsrResponse, t as renderRouterToStream, w as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { n as setCookie, r as toResponse, t as H3Event } from "../_libs/h3-v2.mjs";
+import { a as defaultSerovalDeserializerPlugins, c as toCrossJSONStream, d as createSerializationAdapter, i as createRawStreamRPCPlugin, n as attachRouterServerSsrUtils, o as makeSerovalPlugin, r as getNormalizedURL, s as toCrossJSONAsync, t as mergeHeaders } from "../_libs/@tanstack/router-core+[...].mjs";
+import { t as fromJSON } from "../_libs/seroval.mjs";
 import { n as createServerHistory } from "../_libs/tanstack__history.mjs";
-import { a as defaultSerovalDeserializerPlugins, i as createRawStreamRPCPlugin, n as attachRouterServerSsrUtils, o as makeSerovalPlugin, r as getNormalizedURL, s as createSerializationAdapter, t as mergeHeaders } from "../_libs/@tanstack/router-core+[...].mjs";
-import { n as setCookie, r as toResponse, t as H3Event } from "../_libs/h3-v2+rou3.mjs";
 import { AsyncLocalStorage } from "node:async_hooks";
-//#region node_modules/.nitro/vite/services/ssr/index.js
-var ssr_exports = /* @__PURE__ */ __exportAll$1({
+// node_modules/.nitro/vite/services/ssr/index.js
+var ssr_exports = /* @__PURE__ */ __exportAll({
 	a: () => getServerFnById,
 	createServerEntry: () => createServerEntry,
 	default: () => server_default,
@@ -13,21 +15,10 @@ var ssr_exports = /* @__PURE__ */ __exportAll$1({
 	n: () => createMiddleware,
 	o: () => getRequest,
 	r: () => createServerFn,
-	s: () => __exportAll,
 	t: () => server_exports
 });
 require_react();
 var import_jsx_runtime = require_jsx_runtime();
-var __defProp = Object.defineProperty;
-var __exportAll = (all, no_symbols) => {
-	let target = {};
-	for (var name in all) __defProp(target, name, {
-		get: all[name],
-		enumerable: true
-	});
-	if (!no_symbols) __defProp(target, Symbol.toStringTag, { value: "Module" });
-	return target;
-};
 function StartServer(props) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RouterProvider, { router: props.router });
 }
@@ -115,7 +106,7 @@ function getRequest() {
 * setCookie('Authorization', '1234567')
 * ```
 */
-function setCookie$1(name, value, options) {
+function setCookie$2(name, value, options) {
 	const event = getH3Event();
 	setCookie(event, name, value, options);
 }
@@ -133,7 +124,7 @@ var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 * the dev styles URL for route-scoped CSS collection.
 */
 async function getStartManifest(matchedRoutes) {
-	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-XbB9s6ln.mjs");
+	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-CWBJylZR.mjs");
 	const startManifest = tsrStartManifest();
 	let routes = startManifest.routes;
 	routes[rootRouteId];
@@ -155,31 +146,31 @@ async function getStartManifest(matchedRoutes) {
 var manifest = {
 	"46252f204f798dbe15b8cec685803999f3c4c8923db1d329954ece8ef27db37f": {
 		functionName: "updateEngagement_createServerFn_handler",
-		importer: () => import("./engagements-C5oghY13.mjs")
+		importer: () => import("./engagements-BXolwOHY.mjs")
 	},
 	"84e93aa9a4240c380045ee2a2b03d040f71423f1e8e84c8eba0a02080539bf41": {
 		functionName: "fetchSessionUser_createServerFn_handler",
-		importer: () => import("./session-Dny7NA0o.mjs")
+		importer: () => import("./session-ByJEOO1U.mjs")
 	},
 	"92448a7271a4eb925fc578459bf3144a334216dd082ee32340a8a1d0590a20e1": {
 		functionName: "getEngagement_createServerFn_handler",
-		importer: () => import("./engagements-C5oghY13.mjs")
+		importer: () => import("./engagements-BXolwOHY.mjs")
 	},
 	"99a9f538bafa47d1e9d86e53c7be762b72a78b5733ec7716e46907338a58e726": {
 		functionName: "createEngagement_createServerFn_handler",
-		importer: () => import("./engagements-C5oghY13.mjs")
+		importer: () => import("./engagements-BXolwOHY.mjs")
 	},
 	"c09cb40eb67c63ca3046b7cd702b516b03a8536351059a5946cf189aa0fdc90e": {
 		functionName: "addFinding_createServerFn_handler",
-		importer: () => import("./engagements-C5oghY13.mjs")
+		importer: () => import("./engagements-BXolwOHY.mjs")
 	},
 	"d4f2e70baf7afa679a5e7e69d45ed2fc0c6b7d84de1a602d1281bf3768de9deb": {
 		functionName: "deleteEngagement_createServerFn_handler",
-		importer: () => import("./engagements-C5oghY13.mjs")
+		importer: () => import("./engagements-BXolwOHY.mjs")
 	},
 	"e6968448a4ebab5dee69996f0f63dc9441313857a8138b9da745999a826a6de2": {
 		functionName: "listEngagements_createServerFn_handler",
-		importer: () => import("./engagements-C5oghY13.mjs")
+		importer: () => import("./engagements-BXolwOHY.mjs")
 	}
 };
 async function getServerFnById(id, access) {
@@ -668,13 +659,16 @@ var createMiddleware = (options, __opts) => {
 		}
 	};
 };
+var csrfSymbol = Symbol.for("tanstack-start:csrf-middleware");
 var innerCreateCsrfMiddleware = (opts = {}) => {
-	return createMiddleware().server(async (ctx) => {
+	const middleware = createMiddleware().server(async (ctx) => {
 		const csrfCtx = ctx;
 		if (opts.filter && !await opts.filter(csrfCtx)) return ctx.next();
 		if (await isCsrfRequestAllowed(opts, csrfCtx)) return ctx.next();
 		return getFailureResponse(opts, csrfCtx);
 	});
+	Object.defineProperty(middleware, csrfSymbol, { value: true });
+	return middleware;
 };
 var createCsrfMiddleware = innerCreateCsrfMiddleware;
 async function isCsrfRequestAllowed(opts, ctx) {
@@ -755,7 +749,7 @@ var handleServerAction = async ({ request, context, serverFnId }) => {
 	try {
 		let res;
 		if (FORM_DATA_CONTENT_TYPES.some((type) => contentType && contentType.includes(type))) {
-			if (methodUpper === "GET") invariant();
+			if (methodUpper === "GET") throw new Error("Invariant failed: GET requests with FormData payloads are not supported");
 			const formData = await request.formData();
 			const serializedContext = formData.get(TSS_FORMDATA_CONTEXT);
 			formData.delete(TSS_FORMDATA_CONTEXT);
@@ -768,7 +762,9 @@ var handleServerAction = async ({ request, context, serverFnId }) => {
 				const parsedContext = JSON.parse(serializedContext);
 				const deserializedContext = fromJSON(parsedContext, { plugins: serovalPlugins });
 				if (typeof deserializedContext === "object" && deserializedContext) params.context = safeObjectMerge(deserializedContext, context);
-			} catch (e) {}
+			} catch (e) {
+				console.warn("Failed to parse FormData context:", e);
+			}
 			res = await action(params);
 		} else if (methodUpper === "GET") {
 			const payloadParam = url.searchParams.get("payload");
@@ -1582,6 +1578,7 @@ function getStartResponseHeaders(opts) {
 	}));
 }
 var entriesPromise;
+var hasWarnedMissingCsrfMiddleware = false;
 var defaultCsrfMiddleware = createCsrfMiddleware({ filter: (ctx) => ctx.handlerType === "serverFn" });
 var getCachedBaseManifest = createCachedBaseManifestLoader(() => getStartManifest());
 var getProdBaseManifest = () => getCachedBaseManifest();
@@ -1589,9 +1586,9 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
 	const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-		import("./router-5v5cmJbt.mjs").then((n) => n.t),
-		import("./start-5Z2QO8AU.mjs"),
-		import("./empty-plugin-adapters-D9UWiqvJ.mjs")
+		import("./router-jJY1LxQg.mjs").then((n) => n.t),
+		import("./start-COmmreO7.mjs"),
+		import("./empty-plugin-adapters-CeyhLWeJ.mjs")
 	]);
 	return {
 		routerEntry,
@@ -1603,11 +1600,39 @@ function getEntries() {
 	if (!entriesPromise) entriesPromise = loadEntries();
 	return entriesPromise;
 }
+function hasCsrfMiddleware(middlewares) {
+	return middlewares.some((middleware) => csrfSymbol in middleware);
+}
+function warnMissingCsrfMiddlewareOnce() {
+	if (hasWarnedMissingCsrfMiddleware) return;
+	hasWarnedMissingCsrfMiddleware = true;
+	console.warn(`TanStack Start server functions are not protected by the CSRF middleware.
+
+Server functions are same-origin RPC endpoints and should be protected from cross-site requests.
+
+Add the CSRF middleware in src/start.ts:
+
+  const csrfMiddleware = createCsrfMiddleware({
+    filter: (ctx) => ctx.handlerType === 'serverFn',
+  })
+
+  export const startInstance = createStart(() => ({
+    requestMiddleware: [csrfMiddleware],
+  }))
+
+If you intentionally handle CSRF another way, disable this warning:
+
+  tanstackStart({
+    serverFns: {
+      disableCsrfMiddlewareWarning: true,
+    },
+  })`);
+}
 var ROUTER_BASEPATH = "/";
 var SERVER_FN_BASE = "/_serverFn/";
 var IS_PRERENDERING = process.env.TSS_PRERENDERING === "true";
 var IS_SHELL_ENV = process.env.TSS_SHELL === "true";
-var IS_DEV = false;
+var IS_DEV = true;
 var ERR_NO_RESPONSE = IS_DEV ? `It looks like you forgot to return a response from your server route handler. If you want to defer to the app router, make sure to have a component set in this route.` : "Internal Server Error";
 var ERR_NO_DEFER = IS_DEV ? `You cannot defer to the app router if there is no component defined on this route.` : "Internal Server Error";
 function throwRouteHandlerError() {
@@ -1862,6 +1887,7 @@ function createStartHandler(cbOrOptions) {
 			};
 			let terminal;
 			if (isServerFnRequest) {
+				if (!hasCsrfMiddleware(flattenedRequestMiddlewares)) warnMissingCsrfMiddlewareOnce();
 				const serverFnId = url.pathname.slice(SERVER_FN_BASE.length).split("/")[0];
 				if (!serverFnId) throw new Error("Invalid server action param for serverFnId");
 				terminal = ({ context }) => runWithStartContext({
@@ -2048,7 +2074,7 @@ async function handleServerRoutes({ getRouter, request, url, executeRouter, cont
 	}, request.signal, terminalNext);
 	return normalizeSsrResponse(response);
 }
-var server_exports = /* @__PURE__ */ __exportAll({ setCookie: () => setCookie$1 });
+var server_exports = /* @__PURE__ */ __exportAll$1({ setCookie: () => setCookie$2 });
 var fetch = createStartHandler(defaultStreamHandler);
 function createServerEntry(entry) {
 	return { async fetch(...args) {
@@ -2056,5 +2082,4 @@ function createServerEntry(entry) {
 	} };
 }
 var server_default = createServerEntry({ fetch });
-//#endregion
-export { getServerFnById as a, ssr_exports as c, createServerEntry, server_default as default, TSS_SERVER_FUNCTION as i, createMiddleware as n, getRequest as o, createServerFn as r, __exportAll as s, server_exports as t };
+export { getServerFnById as a, createServerEntry, server_default as default, TSS_SERVER_FUNCTION as i, createMiddleware as n, getRequest as o, createServerFn as r, ssr_exports as s, server_exports as t };

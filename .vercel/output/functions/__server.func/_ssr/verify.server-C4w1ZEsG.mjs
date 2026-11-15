@@ -1,9 +1,10 @@
-import { o as getRequest, s as __exportAll } from "./ssr.mjs";
-import { $t as generateId, A as email, Bt as ATTR_CONTEXT, C as serializeSignedCookie, D as any, Dt as JWTExpired, F as optional, G as importJWK, Gt as getAuthTables, H as base64Url, Ht as ATTR_OPERATION_ID, I as record, Jt as runWithAdapter, K as jwtVerify, Kt as getCurrentAdapter, L as string, M as looseObject, N as number, O as array, P as object, Qt as initGetFieldName, S as serializeCookie, U as decodeJwt, Ut as import_src, Vt as ATTR_HOOK_TYPE, W as decodeProtectedHeader, Wt as safeJSONParse, Xt as getBetterAuthVersion, Yt as runWithTransaction, Zt as initGetModelName, _ as runWithRequestState, _n as APIError, a as createAuthorizationURL, b as createRouter$1, bn as BASE_ERROR_CODES, c as createRateLimitKey, cn as logger, d as deprecate, dn as env, en as createRandomStringGenerator, f as createAuthEndpoint, g as hasRequestState, gn as isTest, h as defineRequestState, hn as isProduction, ht as encode, i as refreshAccessToken, k as boolean, l as findInvalidTrustedProxies, ln as shouldPublishLog, m as isAPIError, mn as isDevelopment, n as socialProviders, o as applyDefaultAccessTokenExpiry, on as normalizePathname, p as createAuthMiddleware, qt as queueAfterTransactionHook, r as validateAuthorizationCode, rn as betterFetch, s as isLoopbackHost, sn as createLogger, t as SocialProviderListEnum, u as getIp, v as getCurrentAuthContext, vn as BetterAuthError, w as filterOutputFields, x as toResponse, y as runWithEndpointContext, yn as kAPIErrorHeaderSymbol, zt as withSpan } from "../_libs/@better-auth/core+[...].mjs";
-import { a as getOrigin, c as isRequestLike, i as getHost, l as resolveBaseURL, n as PACKAGE_VERSION, o as getProtocol, r as getBaseURL, s as isDynamicBaseURLConfig, t as GENERIC_OAUTH_ERROR_CODES, u as wildcardMatch } from "./url-DwGxbmbA.mjs";
-import { n as defu, t as createDefu } from "../_libs/defu.mjs";
-import { n as getPglite, t as ensureDbReady } from "./db-3BohDyve.mjs";
+import { t as __exportAll } from "./rolldown-runtime-D8jQpDG7.mjs";
+import { o as getRequest } from "./ssr.mjs";
+import { a as getOrigin, c as isRequestLike, i as getHost, l as resolveBaseURL, n as PACKAGE_VERSION, o as getProtocol, r as getBaseURL, s as isDynamicBaseURLConfig, t as GENERIC_OAUTH_ERROR_CODES, u as wildcardMatch } from "./url-CtjE_NaK.mjs";
+import { n as getPglite, t as ensureDbReady } from "./db-BhKN53z1.mjs";
 import { a as PostgresIntrospector, c as sql, i as PostgresAdapter, n as getKyselyDatabaseType, o as PostgresQueryCompiler, s as CompiledQuery, t as createKyselyAdapter } from "../_libs/@better-auth/kysely-adapter+[...].mjs";
+import { $t as initGetModelName, A as email, Bt as ATTR_CONTEXT, C as serializeSignedCookie, D as any, Dt as JWTExpired, F as optional, G as importJWK, Gt as ATTR_HTTP_ROUTE, H as base64Url, Ht as ATTR_OPERATION_ID, I as record, Jt as getCurrentAdapter, K as jwtVerify, Kt as safeJSONParse, L as string, M as looseObject, N as number, O as array, P as object, Qt as getBetterAuthVersion, S as serializeCookie, Sn as BASE_ERROR_CODES, U as decodeJwt, Ut as ATTR_DB_COLLECTION_NAME, Vt as ATTR_HOOK_TYPE, W as decodeProtectedHeader, Wt as ATTR_HTTP_RESPONSE_STATUS_CODE, Xt as runWithAdapter, Yt as queueAfterTransactionHook, Zt as runWithTransaction, _ as runWithRequestState, _n as isProduction, a as createAuthorizationURL, an as betterFetch, b as createRouter$1, bn as BetterAuthError, c as createRateLimitKey, cn as normalizePathname, d as deprecate, dn as shouldPublishLog, en as initGetFieldName, f as createAuthEndpoint, g as hasRequestState, gn as isDevelopment, h as defineRequestState, ht as encode, i as refreshAccessToken, k as boolean, l as findInvalidTrustedProxies, ln as createLogger, m as isAPIError, n as socialProviders, nn as createRandomStringGenerator, o as applyDefaultAccessTokenExpiry, p as createAuthMiddleware, pn as env, qt as getAuthTables, r as validateAuthorizationCode, s as isLoopbackHost, t as SocialProviderListEnum, tn as generateId, u as getIp, un as logger, v as getCurrentAuthContext, vn as isTest, w as filterOutputFields, x as toResponse, xn as kAPIErrorHeaderSymbol, y as runWithEndpointContext, yn as APIError, zt as createWithSpan } from "../_libs/@better-auth/core+[...].mjs";
+import { n as defu, t as createDefu } from "../_libs/defu.mjs";
 import { i as jwtDecrypt, n as EncryptJWT, r as SignJWT, t as calculateJwkThumbprint } from "../_libs/jose.mjs";
 import { n as hkdf, t as sha256 } from "../_libs/noble__hashes.mjs";
 import { i as verifyPassword, n as binary, r as hashPassword, t as createHMAC } from "../_libs/better-auth__utils.mjs";
@@ -12,7 +13,7 @@ import { a as utf8ToBytes, i as managedNonce, n as bytesToHex, r as hexToBytes, 
 import { n as string$1, t as boolean$1 } from "../_libs/zod.mjs";
 import { t as Pool } from "../_libs/pg.mjs";
 import { randomBytes } from "node:crypto";
-//#region node_modules/.nitro/vite/services/ssr/assets/verify.server-BE9SUdY4.js
+// node_modules/.nitro/vite/services/ssr/assets/verify.server-C4w1ZEsG.js
 function tryDecode$1(str) {
 	if (str.indexOf("%") === -1) return str;
 	try {
@@ -2373,6 +2374,7 @@ function getStorageOption(identifier, config) {
 	return config;
 }
 function getWithHooks(adapter, ctx) {
+	const withSpan = createWithSpan(ctx.options);
 	const hooksEntries = ctx.hooks;
 	async function createWithHooks(data, model, customCreateFn) {
 		const context = await getCurrentAuthContext().catch(() => null);
@@ -2382,7 +2384,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) {
 				const result = await withSpan(`db create.before ${model}`, {
 					[ATTR_HOOK_TYPE]: "create.before",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(actualData, context));
 				if (result === false) return null;
@@ -2404,7 +2406,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) await queueAfterTransactionHook(async () => {
 				await withSpan(`db create.after ${model}`, {
 					[ATTR_HOOK_TYPE]: "create.after",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(created, context));
 			});
@@ -2419,7 +2421,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) {
 				const result = await withSpan(`db update.before ${model}`, {
 					[ATTR_HOOK_TYPE]: "update.before",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(data, context));
 				if (result === false) return null;
@@ -2440,7 +2442,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) await queueAfterTransactionHook(async () => {
 				await withSpan(`db update.after ${model}`, {
 					[ATTR_HOOK_TYPE]: "update.after",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(updated, context));
 			});
@@ -2455,7 +2457,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) {
 				const result = await withSpan(`db updateMany.before ${model}`, {
 					[ATTR_HOOK_TYPE]: "updateMany.before",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(data, context));
 				if (result === false) return null;
@@ -2476,7 +2478,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) await queueAfterTransactionHook(async () => {
 				await withSpan(`db updateMany.after ${model}`, {
 					[ATTR_HOOK_TYPE]: "updateMany.after",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(updated, context));
 			});
@@ -2498,7 +2500,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) {
 				if (await withSpan(`db delete.before ${model}`, {
 					["better_auth.hook.type"]: "delete.before",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					["db.collection.name"]: model,
 					["better_auth.context"]: source
 				}, () => toRun(entityToDelete, context)) === false) return null;
 			}
@@ -2513,7 +2515,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) await queueAfterTransactionHook(async () => {
 				await withSpan(`db delete.after ${model}`, {
 					[ATTR_HOOK_TYPE]: "delete.after",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(entityToDelete, context));
 			});
@@ -2534,7 +2536,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) {
 				if (await withSpan(`db delete.before ${model}`, {
 					["better_auth.hook.type"]: "delete.before",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					["db.collection.name"]: model,
 					["better_auth.context"]: source
 				}, () => toRun(entity, context)) === false) return null;
 			}
@@ -2549,7 +2551,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) await queueAfterTransactionHook(async () => {
 				await withSpan(`db delete.after ${model}`, {
 					[ATTR_HOOK_TYPE]: "delete.after",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(entity, context));
 			});
@@ -2593,7 +2595,7 @@ function getWithHooks(adapter, ctx) {
 			if (snapshot) {
 				for (const { source, fn } of beforeHooks) if (await withSpan(`db delete.before ${model}`, {
 					["better_auth.hook.type"]: "delete.before",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					["db.collection.name"]: model,
 					["better_auth.context"]: source
 				}, () => fn(snapshot, context)) === false) return null;
 			}
@@ -2605,7 +2607,7 @@ function getWithHooks(adapter, ctx) {
 			if (toRun) await queueAfterTransactionHook(async () => {
 				await withSpan(`db delete.after ${model}`, {
 					[ATTR_HOOK_TYPE]: "delete.after",
-					[import_src.ATTR_DB_COLLECTION_NAME]: model,
+					[ATTR_DB_COLLECTION_NAME]: model,
 					[ATTR_CONTEXT]: source
 				}, () => toRun(consumed, context));
 			});
@@ -3987,7 +3989,7 @@ async function handleOAuthUserInfo(c, opts) {
 				};
 			}
 			try {
-				await c.context.internalAdapter.linkAccount({
+				const createdAccount = await c.context.internalAdapter.linkAccount({
 					providerId: account.providerId,
 					accountId: userInfo.id.toString(),
 					userId: dbUser.user.id,
@@ -3998,6 +4000,11 @@ async function handleOAuthUserInfo(c, opts) {
 					refreshTokenExpiresAt: account.refreshTokenExpiresAt,
 					scope: account.scope
 				});
+				if (!createdAccount) return {
+					error: "unable to link account",
+					data: null
+				};
+				if (c.context.options.account?.storeAccountCookie) await setAccountCookie(c, createdAccount);
 			} catch (e) {
 				c.context.logger.error("Unable to link account", e);
 				return {
@@ -6678,6 +6685,7 @@ function mergeAPIErrorHeaders(error) {
 	return headers;
 }
 async function runBeforeHooks(context, hooks, endpoint, operationId) {
+	const withSpan = createWithSpan(context.context.options);
 	let modifiedContext = {};
 	for (const hook of hooks) {
 		let matched = false;
@@ -6693,7 +6701,7 @@ async function runBeforeHooks(context, hooks, endpoint, operationId) {
 		const route = endpoint.path ?? "/:virtual";
 		const result = await withSpan(`hook before ${route} ${hookSource}`, {
 			[ATTR_HOOK_TYPE]: "before",
-			[import_src.ATTR_HTTP_ROUTE]: route,
+			[ATTR_HTTP_ROUTE]: route,
 			[ATTR_CONTEXT]: hookSource,
 			[ATTR_OPERATION_ID]: operationId
 		}, () => hook.handler({
@@ -6721,13 +6729,14 @@ async function runBeforeHooks(context, hooks, endpoint, operationId) {
 	return { context: modifiedContext };
 }
 async function runAfterHooks(context, hooks, endpoint, operationId) {
+	const withSpan = createWithSpan(context.context.options);
 	for (const hook of hooks) {
 		if (!hook.matcher(context)) continue;
 		const hookSource = hooksSourceWeakMap.get(hook.handler) ?? "unknown";
 		const route = endpoint.path ?? "/:virtual";
 		const result = await withSpan(`hook after ${route} ${hookSource}`, {
 			[ATTR_HOOK_TYPE]: "after",
-			[import_src.ATTR_HTTP_ROUTE]: route,
+			[ATTR_HTTP_ROUTE]: route,
 			[ATTR_CONTEXT]: hookSource,
 			[ATTR_OPERATION_ID]: operationId
 		}, () => hook.handler(context)).catch((e) => {
@@ -6798,6 +6807,7 @@ function getHooks(authContext) {
 * @param input Input context whose `context` is an already-resolved `AuthContext`.
 */
 async function dispatchAuthEndpoint(endpoint, input) {
+	const withSpan = createWithSpan(input.context.options);
 	const operationId = input.operationId ?? getOperationId(endpoint);
 	const route = endpoint.path ?? "/:virtual";
 	const endpointMethod = endpoint.options?.method;
@@ -6816,7 +6826,7 @@ async function dispatchAuthEndpoint(endpoint, input) {
 		headers: input.headers ? new Headers(input.headers) : void 0
 	};
 	return withSpan(`${methodName} ${route}`, {
-		[import_src.ATTR_HTTP_ROUTE]: route,
+		[ATTR_HTTP_ROUTE]: route,
 		[ATTR_OPERATION_ID]: operationId
 	}, async () => runWithEndpointContext(internalContext, async () => {
 		const { beforeHooks, afterHooks } = getHooks(internalContext.context);
@@ -6842,7 +6852,7 @@ async function dispatchAuthEndpoint(endpoint, input) {
 		internalContext.returnHeaders = true;
 		internalContext.returnStatus = true;
 		const result = await runWithEndpointContext(internalContext, () => withSpan(`handler ${route}`, {
-			[import_src.ATTR_HTTP_ROUTE]: route,
+			[ATTR_HTTP_ROUTE]: route,
 			[ATTR_OPERATION_ID]: operationId
 		}, () => endpoint(internalContext))).catch((e) => {
 			if (isAPIError(e)) return {
@@ -6990,6 +7000,7 @@ To resolve this, you can:
 	}
 }
 function getEndpoints(ctx, options) {
+	const withSpan = createWithSpan(options);
 	const pluginEndpoints = options.plugins?.reduce((acc, plugin) => {
 		return {
 			...acc,
@@ -7001,7 +7012,7 @@ function getEndpoints(ctx, options) {
 			const authContext = await ctx;
 			return withSpan(`middleware ${m.path} ${plugin.id}`, {
 				["better_auth.hook.type"]: "middleware",
-				[import_src.ATTR_HTTP_ROUTE]: m.path,
+				["http.route"]: m.path,
 				["better_auth.context"]: `plugin:${plugin.id}`
 			}, () => m.middleware({
 				...context,
@@ -7056,6 +7067,7 @@ function getEndpoints(ctx, options) {
 	};
 }
 var router = (ctx, options) => {
+	const withSpan = createWithSpan(options);
 	const { api, middlewares } = getEndpoints(ctx, options);
 	const basePath = new URL(ctx.baseURL).pathname;
 	return createRouter$1(api, {
@@ -7090,7 +7102,7 @@ var router = (ctx, options) => {
 				const response = await withSpan(`onResponse ${plugin.id}`, {
 					[ATTR_HOOK_TYPE]: "onResponse",
 					[ATTR_CONTEXT]: `plugin:${plugin.id}`,
-					[import_src.ATTR_HTTP_RESPONSE_STATUS_CODE]: res.status
+					[ATTR_HTTP_RESPONSE_STATUS_CODE]: res.status
 				}, () => plugin.onResponse(res, ctx));
 				if (response) return response.response;
 			}
@@ -8522,7 +8534,7 @@ var tanstackStartCookies = () => {
 					const setCookies = returned?.get("set-cookie");
 					if (!setCookies) return;
 					const parsed = parseSetCookieHeader(setCookies);
-					const { setCookie } = await import("./ssr.mjs").then((n) => n.c).then((n) => n.t);
+					const { setCookie } = await import("./ssr.mjs").then((n) => n.s).then((n) => n.t);
 					parsed.forEach((value, key) => {
 						if (!key) return;
 						try {
@@ -8582,7 +8594,7 @@ async function emitSessionCookie(ctx, sessionTokenName, sessionToken) {
 		return null;
 	}
 	try {
-		const { setCookie } = await import("./ssr.mjs").then((n) => n.c).then((n) => n.t);
+		const { setCookie } = await import("./ssr.mjs").then((n) => n.s).then((n) => n.t);
 		setCookie(sessionTokenName, sessionValue, {
 			path: cookieOptions.path ?? "/",
 			httpOnly: cookieOptions.httpOnly ?? true,
@@ -8614,7 +8626,7 @@ async function expireSessionDataCookie(ctx, cookie) {
 	const path = cookie.attributes.path ?? "/";
 	const secure = cookie.attributes.secure ?? true;
 	try {
-		const { setCookie } = await import("./ssr.mjs").then((n) => n.c).then((n) => n.t);
+		const { setCookie } = await import("./ssr.mjs").then((n) => n.s).then((n) => n.t);
 		setCookie(cookie.name, "", {
 			path,
 			httpOnly: true,
@@ -8642,7 +8654,7 @@ async function writeGateMarkerCookie(ctx, clear) {
 	const maxAge = clear ? 0 : typeof sessionMaxAge === "number" ? sessionMaxAge : void 0;
 	const value = clear ? "" : "1";
 	try {
-		const { setCookie } = await import("./ssr.mjs").then((n) => n.c).then((n) => n.t);
+		const { setCookie } = await import("./ssr.mjs").then((n) => n.s).then((n) => n.t);
 		setCookie(GATE_SESSION_MARKER_COOKIE, value, {
 			path: "/",
 			httpOnly: false,
@@ -8986,9 +8998,6 @@ var auth = betterAuth({
 	]
 });
 var verify_server_exports = /* @__PURE__ */ __exportAll({
-	DEV_USER_ID: () => DEV_USER_ID,
-	UnauthorizedError: () => UnauthorizedError,
-	authConfigured: () => authConfigured,
 	getSessionUser: () => getSessionUser,
 	requireUserId: () => requireUserId
 });
@@ -9064,5 +9073,4 @@ async function requireUserId(bearerToken) {
 	if (!user) throw new UnauthorizedError();
 	return user.id;
 }
-//#endregion
 export { GROK_PROVIDERS as a, hasGateSessionMarker as i, verify_server_exports as n, auth as r, getSessionUser as t };

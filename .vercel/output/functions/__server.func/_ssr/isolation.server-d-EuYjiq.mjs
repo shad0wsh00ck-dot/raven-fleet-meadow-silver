@@ -1,9 +1,7 @@
-import { o as getRequest, s as __exportAll } from "./ssr.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/isolation.server-l_Ds1Zru.js
-var isolation_server_exports = /* @__PURE__ */ __exportAll({
-	CrossSiteRequestError: () => CrossSiteRequestError,
-	assertSameSiteRequest: () => assertSameSiteRequest
-});
+import { t as __exportAll } from "./rolldown-runtime-D8jQpDG7.mjs";
+import { o as getRequest } from "./ssr.mjs";
+// node_modules/.nitro/vite/services/ssr/assets/isolation.server-d-EuYjiq.js
+var isolation_server_exports = /* @__PURE__ */ __exportAll({ assertSameSiteRequest: () => assertSameSiteRequest });
 /**
 * Fetch-Metadata sibling isolation — **server-only** (`.server.ts` suffix).
 *
@@ -44,5 +42,4 @@ function assertSameSiteRequest() {
 	if (h.get("sec-fetch-mode") === "navigate" && request.method === "GET" && dest !== "object" && dest !== "embed") return;
 	throw new CrossSiteRequestError();
 }
-//#endregion
 export { isolation_server_exports as n, assertSameSiteRequest as t };

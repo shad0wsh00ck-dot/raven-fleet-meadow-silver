@@ -1,11 +1,5 @@
-import { o as NodeResponse, s as FastURL } from "./h3+rou3+srvx.mjs";
-//#region node_modules/h3-v2/node_modules/rou3/dist/index.mjs
-var NullProtoObj = /* @__PURE__ */ (() => {
-	const e = function() {};
-	return e.prototype = Object.create(null), Object.freeze(e.prototype), e;
-})();
-//#endregion
-//#region node_modules/h3-v2/dist/h3-Bz4OPZv_.mjs
+import { c as FastURL, o as NullProtoObj, s as NodeResponse } from "./h3+rou3+srvx.mjs";
+// node_modules/h3-v2/dist/h3-Bz4OPZv_.mjs
 function decodePathname(pathname) {
 	return decodeURI(pathname.includes("%25") ? pathname.replace(/%25/g, "%2525") : pathname);
 }
@@ -503,5 +497,4 @@ function _getDistinctCookieKey(name, options) {
 		options.path || "/"
 	].join(";");
 }
-//#endregion
 export { setCookie as n, toResponse as r, H3Event as t };
